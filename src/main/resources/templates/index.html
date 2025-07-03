@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Usuários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px 20px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1f1f2e;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease-in-out;
+        }
+
+        .logout {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logout a {
+            color: #ff6666;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logout a:hover {
+            color: #ff3333;
+        }
+    </style>
+</head>
+<body>
+    <p>Bem-vindo, <span th:text="${usuarioNome}">Usuário</span>!</p>
+    
+    <div class="container">
+        <h1>Usuários Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Data de Cadastro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>João da Silva</td>
+                    <td>joao@email.com</td>
+                    <td>03/07/2025</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Maria Oliveira</td>
+                    <td>maria@email.com</td>
+                    <td>03/07/2025</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vitor Abe</td>
+                    <td>vitor@email.com</td>
+                    <td>03/07/2025</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <<div class="logout" style="text-align: center; margin-top: 20px;">
+    <form action="/login" method="get" style="display: inline;">
+        <button type="submit" style="
+            padding: 10px 25px;
+            background-color: #ff4b5c;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        "
+        onmouseover="this.style.backgroundColor='#ff1e2e';"
+        onmouseout="this.style.backgroundColor='#ff4b5c';">
+            Sair
+        </button>
+    </form>
+</div>
+
+    </div>
+</body>
+</html>

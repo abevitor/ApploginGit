@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <style>
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #000000, #340263);
@@ -52,7 +52,7 @@
             width: 100%;
             padding: 12px;
             margin-top: 10px;
-            background: linear-gradient(to right, #000000, #f2fcfe);
+            background: linear-gradient(to right, #000000, #505050);
             border: none;
             border-radius: 6px;
             color: #fff;
@@ -82,22 +82,27 @@
             color: #81888b;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="/login" method="post">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" required>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Login</h2>
+            <form action="/login" method="post">
 
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" required>
+                <div th:if="${erro}"
+                    style="color: red; text-align: center; margin-bottom: 15px;">
+                    <p th:text="${erro}"></p>
+                </div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
 
-            <input type="submit" value="Entrar">
-        </form>
-        <div class="link">
-            <a href="/registrar">Criar conta</a>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <input type="submit" value="Entrar">
+            </form>
+            <div class="link">
+                <a href="/registrar">Criar conta</a>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
