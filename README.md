@@ -19,6 +19,6 @@
 - Spring Data JPA
 - Thymeleaf
 - Jakarta Validation
-- PostgreSQL
+- MySQL
 - HTML + CSS (puro, estilizado com gradientes)
 - Cookies (via `HttpServletRequest` e `HttpServletResponse`)
